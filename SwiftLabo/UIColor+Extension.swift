@@ -9,6 +9,13 @@
 import UIKit
 
 extension UIColor {
+    convenience init(r: Int, g: Int, b: Int, alpha: CGFloat = 1.0) {
+        let red = CGFloat(r) / 255.0
+        let green = CGFloat(g) / 255.0
+        let blue = CGFloat(b) / 255.0
+        self.init(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    
     class func randomColor() -> UIColor {
         let r: CGFloat = CGFloat(arc4random_uniform(255)+1) / 255.0
         let g: CGFloat = CGFloat(arc4random_uniform(255)+1) / 255.0
